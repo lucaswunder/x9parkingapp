@@ -2,7 +2,7 @@
   "name": "app-lohana",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lucaswunder.github.io/x9parkingapp",
+  "homepage": "https://lucaswunder.github.io/x9parkingapp",
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@testing-library/jest-dom": "^5.17.0",
