@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/x9parkingapp/static/css/main.2fa10248.css",
-    "main.js": "/x9parkingapp/static/js/main.b1889845.js",
+    "main.js": "/x9parkingapp/static/js/main.6dcd88e9.js",
     "static/js/453.0b9010a1.chunk.js": "/x9parkingapp/static/js/453.0b9010a1.chunk.js",
     "static/media/logo.png": "/x9parkingapp/static/media/logo.8cf55edf6d02cfaa1426.png",
     "index.html": "/x9parkingapp/index.html",
     "main.2fa10248.css.map": "/x9parkingapp/static/css/main.2fa10248.css.map",
-    "main.b1889845.js.map": "/x9parkingapp/static/js/main.b1889845.js.map",
+    "main.6dcd88e9.js.map": "/x9parkingapp/static/js/main.6dcd88e9.js.map",
     "453.0b9010a1.chunk.js.map": "/x9parkingapp/static/js/453.0b9010a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2fa10248.css",
-    "static/js/main.b1889845.js"
+    "static/js/main.6dcd88e9.js"
   ]
 }
