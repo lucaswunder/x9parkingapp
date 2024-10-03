@@ -12,6 +12,7 @@ const Denunciar: React.FC = () => {
     const [image2, setImage2] = useState<string | null>(null);
     const [isFirstImageTaken, setIsFirstImageTaken] = useState(false);
     const navigate = useNavigate();
+    const ENVIRONMENT = "environment";
 
     const webcamRef = React.useRef<Webcam>(null);
 
@@ -64,7 +65,6 @@ const Denunciar: React.FC = () => {
         notify('Imagens resetadas com sucesso.')
     };
 
-
     return (
         <div className="flex flex-col min-h-screen justify-between items-center bg-white">
             <ToastContainer />
@@ -85,6 +85,9 @@ const Denunciar: React.FC = () => {
                 {/* Webcam */}
                 {!image1 || !image2 ? (
                     <Webcam
+                        videoConstraints={{
+                            facingMode: ENVIRONMENT
+                        }}
                         audio={false}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
@@ -133,9 +136,7 @@ const Denunciar: React.FC = () => {
                             Limpar
                         </button>
                     )}
-
                 </div>
-
             </main>
             {/* Footer */}
             <footer className="w-full py-4 text-center border-t">
