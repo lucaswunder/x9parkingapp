@@ -131,7 +131,7 @@ const QRCodePage: React.FC = () => {
                 {/* QR Code Reader */}
                 <div id={qrCodeRegionId} className="w-full max-w-xs bg-gray-100 p-4 rounded-lg shadow-md" />
                 <div className="mt-4 text-center">
-                    {qrHasError && <p className={`w-full pl-10 pr-10 py-2 rounded-md ${qrHasError ? 'text-red-900' : ''} }`}>TESTE</p>}
+                    {qrHasError && <p className={`w-full pl-10 pr-10 py-2 rounded-md ${qrHasError ? 'text-red-900' : ''} }`}>Não foi possivel ler o QR Code</p>}
                 </div>
 
                 {userFound && (
@@ -154,7 +154,7 @@ const QRCodePage: React.FC = () => {
                         Limpar
                     </button>
                     <button
-                        onClick={() => navigate('/denunciar')}
+                        onClick={() => navigate('/report')}
                         className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700"
                     >
                         Denunciar
