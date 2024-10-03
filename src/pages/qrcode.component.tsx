@@ -46,7 +46,7 @@ const QRCodePage: React.FC = () => {
 
     useEffect(() => {
         if (!isAuthenticated) {
-            navigate('/login'); // Se não estiver autenticado, redireciona para o login
+            navigate('/login');
         }
     }, [isAuthenticated, navigate]);
 
@@ -66,7 +66,9 @@ const QRCodePage: React.FC = () => {
                 handleScanFailure
             );
         };
+
         createQrCodeScanner();
+
         return () => {
             if (qrCodeScannerRef.current) {
                 qrCodeScannerRef.current.clear();
@@ -78,7 +80,7 @@ const QRCodePage: React.FC = () => {
         return null;
     }
 
-    const findActiveUsers = (decodedText: string | null) => {
+    const findActiveUsers = async (decodedText: string | null) => {
         console.log(decodedText);
 
         const decodedUser = JSON.parse(decodedText || "");
@@ -92,12 +94,16 @@ const QRCodePage: React.FC = () => {
         setUserFound(activeUser)
     }
 
-    const handleScanSuccess = (decodedText: string) => {
-        setQrData(decodedText);
+    const handleScanSuccess = async (decodedText: string) => {
+        await setQrData(decodedText);
+
         if (qrCodeScannerRef.current) {
             qrCodeScannerRef.current.pause();
         }
-        findActiveUsers(qrData)
+
+        console.log(qrData);
+
+        await findActiveUsers(decodedText)
     };
     // Optional: Called on scan failure (e.g., no QR code detected)
     const handleScanFailure = (error: any) => {
@@ -108,9 +114,7 @@ const QRCodePage: React.FC = () => {
     const handleReset = () => {
         setQrData(null);
         setQrHasError(false)
-        if (qrCodeScannerRef.current) {
-            qrCodeScannerRef.current.pause();  // Resume scanning
-        }
+        setUserFound(null)
     };
     return (
         <div className="flex flex-col min-h-screen justify-between items-center bg-white">
@@ -131,20 +135,13 @@ const QRCodePage: React.FC = () => {
                 {/* QR Code Reader */}
                 <div id={qrCodeRegionId} className="w-full max-w-xs bg-gray-100 p-4 rounded-lg shadow-md" />
                 <div className="mt-4 text-center">
-                    {qrHasError && <p className={`w-full pl-10 pr-10 py-2 rounded-md ${qrHasError ? 'text-red-900' : ''} }`}>Não foi possivel ler o QR Code</p>}
+                    {qrHasError && !qrData && <p className={`w-full pl-10 pr-10 py-2 rounded-md ${qrHasError ? 'text-red-900' : ''} }`}>Não foi possivel ler o QR Code</p>}
                 </div>
 
-                {userFound && (
+                {userFound && qrData && (
                     <QrUserComponent userData={userFound} />
                 )}
-                {/* Show scanned QR code data
-                <div className="mt-4 text-center">
-                    {qrData ? (
-                        <p className="text-green-500 font-semibold">QR Code: {qrData}</p>
-                    ) : (
-                        <p className="text-gray-500">Posicione o QR code na câmera</p>
-                    )}
-                </div> */}
+
                 {/* Buttons */}
                 <div className="mt-7 flex space-x-4">
                     <button

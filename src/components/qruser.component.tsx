@@ -1,5 +1,5 @@
 import React from 'react';
-
+import avatar from '../assets/girl-avatar.png';
 // interface UserData {
 //     id: string;
 //     motorista: string;
@@ -13,10 +13,12 @@ const captalize = (text: string): string => {
 }
 
 const QrUserComponent: React.FC<{ userData: any }> = ({ userData }) => {
+    console.log(userData);
+
     return (
         <div className="flex items-center p-4 rounded-lg"> {/* Container */}
             <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center mr-4"> {/* AvatarPlaceholder */}
-                {/* You can add an image component here for the user's avatar */}
+                <img src={avatar} alt="Logo" className="h-48 w-48 object-contain" />
             </div>
             <div> {/* Content */}
                 <h2 className="text-xl font-semibold mb-1">Informações</h2>
