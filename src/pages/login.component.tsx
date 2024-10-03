@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon, EyeIcon, CheckIcon, LockClosedIcon, UserIcon } from '@heroicons/react/24/solid';

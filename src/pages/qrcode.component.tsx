@@ -78,7 +78,7 @@ const QRCodePage: React.FC = () => {
         return null;
     }
 
-    const findActiveUsers = (decodedText: string) => {
+    const findActiveUsers = (decodedText: string | null) => {
         console.log(decodedText);
 
         const decodedUser = JSON.parse(decodedText || "");
@@ -97,7 +97,7 @@ const QRCodePage: React.FC = () => {
         if (qrCodeScannerRef.current) {
             qrCodeScannerRef.current.pause();
         }
-        findActiveUsers(decodedText)
+        findActiveUsers(qrData)
     };
     // Optional: Called on scan failure (e.g., no QR code detected)
     const handleScanFailure = (error: any) => {
