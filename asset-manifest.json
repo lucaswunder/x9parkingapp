@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/x9parkingapp/static/css/main.2fa10248.css",
-    "main.js": "/x9parkingapp/static/js/main.1f8ae911.js",
+    "main.css": "/x9parkingapp/static/css/main.f20db1eb.css",
+    "main.js": "/x9parkingapp/static/js/main.1f9b30c9.js",
     "static/js/453.0b9010a1.chunk.js": "/x9parkingapp/static/js/453.0b9010a1.chunk.js",
     "static/media/logo.png": "/x9parkingapp/static/media/logo.8cf55edf6d02cfaa1426.png",
     "index.html": "/x9parkingapp/index.html",
-    "main.2fa10248.css.map": "/x9parkingapp/static/css/main.2fa10248.css.map",
-    "main.1f8ae911.js.map": "/x9parkingapp/static/js/main.1f8ae911.js.map",
+    "main.f20db1eb.css.map": "/x9parkingapp/static/css/main.f20db1eb.css.map",
+    "main.1f9b30c9.js.map": "/x9parkingapp/static/js/main.1f9b30c9.js.map",
     "453.0b9010a1.chunk.js.map": "/x9parkingapp/static/js/453.0b9010a1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fa10248.css",
-    "static/js/main.1f8ae911.js"
+    "static/css/main.f20db1eb.css",
+    "static/js/main.1f9b30c9.js"
   ]
 }
