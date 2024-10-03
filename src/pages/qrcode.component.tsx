@@ -27,7 +27,7 @@ const QRCodePage: React.FC = () => {
     const active_users: UserData[] = [
         {
             id: "1",
-            motorista: "lohana costa santos",
+            motorista: "Lohana Costa Santos",
             placas: "IJB0JU",
             data: "2024-05-01",
             cidade: "imbé",
@@ -35,14 +35,13 @@ const QRCodePage: React.FC = () => {
         },
         {
             id: "2",
-            motorista: "lucas",
+            motorista: "Lucas Santos",
             placas: "AJB0JU",
             data: "2024-05-01",
             cidade: "tramandai",
             uf: "Santa Catarina"
         }
     ]
-
 
     useEffect(() => {
         if (!isAuthenticated) {
