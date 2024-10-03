@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/loggedin" element={<LoggedInPage />} />
-      <Route path="/scanqr" element={<QRCodePage />} />
+      <Route path="/scan-qr" element={<QRCodePage />} />
     </Routes>
   );
 };

@@ -49,7 +49,7 @@ const LoggedInPage: React.FC = () => {
                 {/* Buttons */}
                 <div className="flex space-x-4">
                     <button
-                        onClick={() => navigate('/scanqr')}
+                        onClick={() => navigate('/scan-qr')}
                         className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700"
                     >
                         Ler QR Code
